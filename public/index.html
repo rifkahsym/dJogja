@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Djogja</title>
+  </head>
+  <body>
+    <header>
+      <h1>dJogja</h1>
+    </header>
+    <main>
+      <form
+        id="login_form"
+        class="form_class"
+        action="login/login-access.php"
+        method="post"
+      >
+        <div class="form_div">
+          <label>Nama:</label>
+          <input
+            class="field_class"
+            name="login_txt"
+            type="text"
+            placeholder="Masukkan nama"
+            autofocus
+          />
+          <label>Mahasiswa/Dosen</label>
+          <select name="profesi" id="prof" placeholder="Pilih satu">
+            <option value="Select">Select</option>
+            <option value="Mahasiswa">Mahasiswa</option>
+            <option value="Dosen">Dosen</option>
+          </select>
+
+          <button
+            class="submit_class"
+            type="submit"
+            form="login_form"
+            onclick="return validarLogin()"
+          >
+            Masuk
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <script>
+      function validarLogin() {
+        // Setelah login berhasil, arahkan ke halaman "jogja.html"
+        window.location.href = "jogja.html";
+        return false;
+      }
+    </script>
+  </body>
+</html>
